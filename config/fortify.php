@@ -85,7 +85,7 @@ return [
     */
 
     'redirects' => [
-        'login' => '/admin/login',
+        'login' => '/admin/dashboard',
         'logout' => '/admin/login',
         'register' => '/admin/dashboard',
         'password-reset' => '/admin/login',
