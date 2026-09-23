@@ -42,3 +42,7 @@ yarn-error.log
 /boost.json
 /opencode.json
 /opencode.jsonc
+
+/deploy/
+/vendor.zip
+/instamed_deploy.zip
