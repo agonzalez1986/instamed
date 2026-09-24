@@ -16,7 +16,7 @@ return [
     */
 
     'ssr' => [
-        'enabled' => true,
+        'enabled' => false,
         'url' => 'http://127.0.0.1:13714',
         // 'bundle' => base_path('bootstrap/ssr/ssr.mjs'),
     ],
@@ -50,7 +50,7 @@ return [
         'vue',
     ],
 
-    'use_script_element_for_initial_page' => false,
+    'use_script_element_for_initial_page' => true,
 
     /*
     |--------------------------------------------------------------------------
