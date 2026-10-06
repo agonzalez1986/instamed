@@ -14,7 +14,17 @@
         scroll-behavior: smooth;
     }
 
+    section[id] {
+        scroll-margin-top: 4rem;
+    }
+
     body {
         @apply bg-white text-gray-900 antialiased;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
     }
 }

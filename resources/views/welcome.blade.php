@@ -37,69 +37,273 @@
 @endsection
 
 @section('content')
-    <x-header active="inicio" />
+    <x-header />
 
-    <main id="inicio" role="main">
-        {{-- Hero --}}
-        <section class="min-h-[80vh] sm:min-h-screen flex items-center justify-center text-white pt-16"
-            style="background: linear-gradient(135deg, #0D1B2A, #1a3a5c);" aria-label="Presentación principal">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-12">
-                <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
-                    Ingeniería Médica<br class="sm:hidden"> de Precisión
-                </h1>
-                <p
-                    class="text-base sm:text-lg md:text-xl lg:text-2xl mb-8 sm:mb-10 max-w-3xl mx-auto opacity-90 leading-relaxed">
-                    Soluciones integrales para la instalación, equipamiento y mantenimiento de
-                    equipamiento hospitalario en Chile.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-                    <a href="#servicios"
-                        class="px-6 sm:px-8 py-3 rounded-lg font-semibold text-base sm:text-lg transition-colors"
-                        style="background-color: #2196F3; color: #fff;">
-                        Nuestros Servicios
-                    </a>
-                    <a href="/contacto"
-                        class="px-6 sm:px-8 py-3 rounded-lg font-semibold text-base sm:text-lg border-2 border-white hover:bg-white hover:text-[#0D1B2A] transition-colors">
-                        Solicitar Cotización
-                    </a>
+    <main role="main">
+        {{-- Inicio: Hero + Estadísticas --}}
+        <section id="inicio" aria-label="Presentación principal">
+            <div class="min-h-[80vh] sm:min-h-screen flex items-center justify-center text-white pt-16"
+                style="background: linear-gradient(135deg, #0D1B2A, #1a3a5c);">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-12">
+                    <h1 class="m-0">
+                        <img src="/logo_blanco_transp.png" alt="Instamed Ingeniería"
+                            class="w-[85%] max-w-md sm:max-w-xl md:max-w-2xl lg:max-w-3xl h-auto mx-auto"
+                            fetchpriority="high">
+                    </h1>
+                    <p
+                        class="text-base sm:text-lg md:text-xl lg:text-xl max-w-3xl mx-auto opacity-90 leading-relaxed mt-6 sm:mt-8">
+                        Soluciones integrales para la instalación, equipamiento y mantenimiento de
+                        equipamiento hospitalario en Chile.
+                    </p>
+                </div>
+            </div>
+            <div class="py-12 sm:py-20" style="background-color: #f8f9fa;" aria-label="Estadísticas">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8">
+                        <article class="text-center p-4">
+                            <p class="text-3xl sm:text-4xl md:text-5xl font-bold mb-1 sm:mb-2" style="color: #2196F3;">15+</p>
+                            <p class="text-sm sm:text-lg" style="color: #666666;">Años de Experiencia</p>
+                        </article>
+                        <article class="text-center p-4">
+                            <p class="text-3xl sm:text-4xl md:text-5xl font-bold mb-1 sm:mb-2" style="color: #2196F3;">200+</p>
+                            <p class="text-sm sm:text-lg" style="color: #666666;">Proyectos Realizados</p>
+                        </article>
+                        <article class="text-center p-4">
+                            <p class="text-3xl sm:text-4xl md:text-5xl font-bold mb-1 sm:mb-2" style="color: #2196F3;">50+</p>
+                            <p class="text-sm sm:text-lg" style="color: #666666;">Clientes Activos</p>
+                        </article>
+                        <article class="text-center p-4">
+                            <p class="text-3xl sm:text-4xl md:text-5xl font-bold mb-1 sm:mb-2" style="color: #2196F3;">98%</p>
+                            <p class="text-sm sm:text-lg" style="color: #666666;">Satisfacción</p>
+                        </article>
+                    </div>
                 </div>
             </div>
         </section>
 
-        {{-- Stats --}}
-        <section class="py-12 sm:py-20 bg-white" aria-label="Estadísticas">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8">
-                    <article class="text-center p-4">
-                        <p class="text-3xl sm:text-4xl md:text-5xl font-bold mb-1 sm:mb-2" style="color: #2196F3;">15+</p>
-                        <p class="text-sm sm:text-lg" style="color: #666666;">Años de Experiencia</p>
-                    </article>
-                    <article class="text-center p-4">
-                        <p class="text-3xl sm:text-4xl md:text-5xl font-bold mb-1 sm:mb-2" style="color: #2196F3;">200+</p>
-                        <p class="text-sm sm:text-lg" style="color: #666666;">Proyectos Realizados</p>
-                    </article>
-                    <article class="text-center p-4">
-                        <p class="text-3xl sm:text-4xl md:text-5xl font-bold mb-1 sm:mb-2" style="color: #2196F3;">50+</p>
-                        <p class="text-sm sm:text-lg" style="color: #666666;">Clientes Activos</p>
-                    </article>
-                    <article class="text-center p-4">
-                        <p class="text-3xl sm:text-4xl md:text-5xl font-bold mb-1 sm:mb-2" style="color: #2196F3;">98%</p>
-                        <p class="text-sm sm:text-lg" style="color: #666666;">Satisfacción</p>
-                    </article>
+        {{-- Nosotros --}}
+        <section id="nosotros" aria-label="Sobre nosotros">
+            {{-- Sobre Instamed --}}
+            <div class="py-12 sm:py-20 bg-white">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid md:grid-cols-2 gap-8 sm:gap-12 items-center">
+                        <div>
+                            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6" style="color: #0D1B2A;">Sobre
+                                Instamed</h2>
+                            <p class="mb-3 sm:mb-4 text-sm sm:text-base leading-relaxed" style="color: #666666;">
+                                Fundada en Chile hace más de 15 años, Instamed nació con la visión de cerrar la brecha
+                                entre la tecnología médica internacional y las necesidades reales de las instituciones
+                                de salud chilenas. Desde nuestros inicios, hemos trabajado incansablemente para ofrecer
+                                soluciones de ingeniería médica de la más alta calidad.
+                            </p>
+                            <p class="mb-3 sm:mb-4 text-sm sm:text-base leading-relaxed" style="color: #666666;">
+                                A lo largo de nuestra trayectoria, hemos completado más de 200 proyectos exitosos,
+                                estableciendo relaciones de largo plazo con hospitales públicos, clínicas privadas y
+                                centros de salud en todo el país.
+                            </p>
+                            <p class="mb-6 sm:mb-8 text-sm sm:text-base leading-relaxed" style="color: #666666;">
+                                Nuestro equipo está compuesto por ingenieros biomédicos, técnicos especializados y
+                                profesionales certificados que comparten la pasión por mejorar la infraestructura de
+                                salud chilena.
+                            </p>
+                            <ul class="space-y-3 sm:space-y-4">
+                                <li class="flex items-center gap-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0"
+                                        fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"
+                                        style="color: #2196F3;" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    <span class="text-sm sm:text-base" style="color: #666666;">Certificación ISO
+                                        9001:2015</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0"
+                                        fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"
+                                        style="color: #2196F3;" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    <span class="text-sm sm:text-base" style="color: #666666;">Soporte técnico 24/7</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0"
+                                        fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"
+                                        style="color: #2196F3;" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    <span class="text-sm sm:text-base" style="color: #666666;">Garantía en todos los
+                                        proyectos</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0"
+                                        fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"
+                                        style="color: #2196F3;" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    <span class="text-sm sm:text-base" style="color: #666666;">Equipo multidisciplinario
+                                        certificado</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="rounded-xl overflow-hidden shadow-lg order-first md:order-last">
+                            <img src="/logo.jpg" alt="Equipo Instamed" class="w-full h-auto" width="600"
+                                height="400" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {{-- Misión y Visión --}}
+            <div class="py-12 sm:py-20" style="background-color: #f8f9fa;" aria-label="Misión y visión">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-12" style="color: #0D1B2A;">
+                        Misión y Visión</h2>
+                    <div class="grid md:grid-cols-2 gap-6 sm:gap-8">
+                        <article class="bg-white rounded-xl p-6 sm:p-8 shadow-sm">
+                            <h3 class="text-xl sm:text-2xl font-bold mb-4" style="color: #0D1B2A;">Misión</h3>
+                            <p class="text-sm sm:text-base leading-relaxed" style="color: #666666;">
+                                Proporcionar soluciones integrales de ingeniería médica que mejoren la capacidad y
+                                calidad de la atención en salud, mediante un servicio técnico excepcional, tecnología de
+                                vanguardia y un compromiso inquebrantable con la seguridad del paciente.
+                            </p>
+                        </article>
+                        <article class="bg-white rounded-xl p-6 sm:p-8 shadow-sm">
+                            <h3 class="text-xl sm:text-2xl font-bold mb-4" style="color: #0D1B2A;">Visión</h3>
+                            <p class="text-sm sm:text-base leading-relaxed" style="color: #666666;">
+                                Ser la empresa líder en ingeniería médica en Latinoamérica, reconocida por nuestra
+                                innovación, excelencia operativa y contribución al fortalecimiento de los sistemas de
+                                salud públicos y privados.
+                            </p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+
+            {{-- Valores --}}
+            <div class="py-12 sm:py-20 bg-white" aria-label="Valores">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-12" style="color: #0D1B2A;">
+                        Nuestros Valores</h2>
+                    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+                        <article class="text-center p-6">
+                            <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mx-auto mb-4"
+                                style="background-color: rgba(33,150,243,0.1);">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 sm:w-8 sm:h-8" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="color: #2196F3;"
+                                    aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-base sm:text-lg font-bold mb-2" style="color: #0D1B2A;">Seguridad</h3>
+                            <p class="text-sm" style="color: #666666;">La seguridad del paciente es el eje central de
+                                cada decisión que tomamos.</p>
+                        </article>
+                        <article class="text-center p-6">
+                            <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mx-auto mb-4"
+                                style="background-color: rgba(33,150,243,0.1);">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 sm:w-8 sm:h-8" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="color: #2196F3;"
+                                    aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-base sm:text-lg font-bold mb-2" style="color: #0D1B2A;">Innovación</h3>
+                            <p class="text-sm" style="color: #666666;">Adoptamos las últimas tecnologías para ofrecer
+                                soluciones de vanguardia.</p>
+                        </article>
+                        <article class="text-center p-6">
+                            <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mx-auto mb-4"
+                                style="background-color: rgba(33,150,243,0.1);">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 sm:w-8 sm:h-8" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="color: #2196F3;"
+                                    aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-base sm:text-lg font-bold mb-2" style="color: #0D1B2A;">Compromiso</h3>
+                            <p class="text-sm" style="color: #666666;">Dedicación total a cada proyecto, respondiendo
+                                con rapidez y eficacia.</p>
+                        </article>
+                        <article class="text-center p-6">
+                            <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mx-auto mb-4"
+                                style="background-color: rgba(33,150,243,0.1);">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 sm:w-8 sm:h-8" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="color: #2196F3;"
+                                    aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-base sm:text-lg font-bold mb-2" style="color: #0D1B2A;">Calidad</h3>
+                            <p class="text-sm" style="color: #666666;">Procesos certificados ISO que garantizan
+                                resultados superiores en cada entrega.</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+
+            {{-- Certificaciones --}}
+            <div class="py-12 sm:py-20" style="background-color: #f8f9fa;" aria-label="Certificaciones">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-12" style="color: #0D1B2A;">
+                        Certificaciones y Alianzas</h2>
+                    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                        <article class="bg-white rounded-xl p-6 shadow-sm text-center">
+                            <div class="w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4"
+                                style="background-color: rgba(33,150,243,0.1);">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor" stroke-width="2" style="color: #2196F3;" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-base sm:text-lg font-bold mb-2" style="color: #0D1B2A;">ISO 9001:2015</h3>
+                            <p class="text-sm" style="color: #666666;">Sistema de Gestión de Calidad certificado
+                                internacionalmente.</p>
+                        </article>
+                        <article class="bg-white rounded-xl p-6 shadow-sm text-center">
+                            <div class="w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4"
+                                style="background-color: rgba(33,150,243,0.1);">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor" stroke-width="2" style="color: #2196F3;" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-base sm:text-lg font-bold mb-2" style="color: #0D1B2A;">Soporte 24/7</h3>
+                            <p class="text-sm" style="color: #666666;">Disponibilidad permanente para emergencias
+                                técnicas críticas.</p>
+                        </article>
+                        <article class="bg-white rounded-xl p-6 shadow-sm text-center sm:col-span-2 lg:col-span-1">
+                            <div class="w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4"
+                                style="background-color: rgba(33,150,243,0.1);">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor" stroke-width="2" style="color: #2196F3;" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-base sm:text-lg font-bold mb-2" style="color: #0D1B2A;">Alianzas
+                                Fabricantes</h3>
+                            <p class="text-sm" style="color: #666666;">Representante autorizado de las principales marcas
+                                de tecnología médica mundial.</p>
+                        </article>
+                    </div>
                 </div>
             </div>
         </section>
 
         {{-- Servicios --}}
-        <section id="servicios" class="py-12 sm:py-20" style="background-color: #f8f9fa;" aria-label="Servicios">
+        <section id="servicios" class="py-12 sm:py-20 bg-white" aria-label="Servicios">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-3 sm:mb-4" style="color: #0D1B2A;">
                     Nuestros Servicios</h2>
                 <p class="text-center mb-8 sm:mb-12 max-w-2xl mx-auto text-sm sm:text-base" style="color: #666666;">
-                    Ofrecemos soluciones completas para cada etapa del ciclo de vida de su equipamiento médico.
+                    Soluciones completas para cada etapa del ciclo de vida de su equipamiento médico.
                 </p>
-                <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
-                    <article class="bg-white rounded-xl p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow">
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 items-start">
+                    <article class="bg-white rounded-xl border border-gray-100 p-6 sm:p-8 shadow-sm">
                         <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-lg flex items-center justify-center mb-4 sm:mb-6"
                             style="background-color: rgba(33,150,243,0.1);">
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 sm:w-7 sm:h-7" fill="none"
@@ -109,13 +313,48 @@
                                     d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                             </svg>
                         </div>
-                        <h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3" style="color: #0D1B2A;">Instalaciones Médicas
-                        </h3>
-                        <p class="text-sm sm:text-base" style="color: #666666;">Diseño y ejecución de infraestructura médica
-                            cumpliendo las más altas
-                            normativas nacionales e internacionales.</p>
+                        <h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3" style="color: #0D1B2A;">Instalaciones
+                            Médicas</h3>
+                        <p class="text-sm sm:text-base leading-relaxed mb-4" style="color: #666666;">
+                            Diseñamos y ejecutamos infraestructura médica conforme a la normativa del Ministerio de
+                            Salud y estándares internacionales.
+                        </p>
+                        <ul class="space-y-2">
+                            <li class="flex items-center gap-2 text-sm sm:text-base" style="color: #666666;">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 flex-shrink-0" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" style="color: #2196F3;"
+                                    aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                                Salas de operación y quirófanos
+                            </li>
+                            <li class="flex items-center gap-2 text-sm sm:text-base" style="color: #666666;">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 flex-shrink-0" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" style="color: #2196F3;"
+                                    aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                                Unidades de cuidados intensivos
+                            </li>
+                            <li class="flex items-center gap-2 text-sm sm:text-base" style="color: #666666;">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 flex-shrink-0" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" style="color: #2196F3;"
+                                    aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                                Laboratorios y servicios diagnósticos
+                            </li>
+                            <li class="flex items-center gap-2 text-sm sm:text-base" style="color: #666666;">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 flex-shrink-0" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" style="color: #2196F3;"
+                                    aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                                Infraestructura de gases médicos
+                            </li>
+                        </ul>
                     </article>
-                    <article class="bg-white rounded-xl p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow">
+                    <article class="bg-white rounded-xl border border-gray-100 p-6 sm:p-8 shadow-sm">
                         <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-lg flex items-center justify-center mb-4 sm:mb-6"
                             style="background-color: rgba(33,150,243,0.1);">
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 sm:w-7 sm:h-7" fill="none"
@@ -127,89 +366,441 @@
                         </div>
                         <h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3" style="color: #0D1B2A;">Equipamiento
                             Hospitalario</h3>
-                        <p class="text-sm sm:text-base" style="color: #666666;">Provisión e integración de tecnología médica
-                            de vanguardia para
-                            optimizar la atención al paciente.</p>
+                        <p class="text-sm sm:text-base leading-relaxed mb-4" style="color: #666666;">
+                            Representamos a los principales fabricantes mundiales y ofrecemos equipamiento certificado
+                            para todas las áreas clínicas.
+                        </p>
+                        <ul class="space-y-2">
+                            <li class="flex items-center gap-2 text-sm sm:text-base" style="color: #666666;">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 flex-shrink-0" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" style="color: #2196F3;"
+                                    aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                                Imagenología y diagnóstico
+                            </li>
+                            <li class="flex items-center gap-2 text-sm sm:text-base" style="color: #666666;">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 flex-shrink-0" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" style="color: #2196F3;"
+                                    aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                                Monitoreo de signos vitales
+                            </li>
+                            <li class="flex items-center gap-2 text-sm sm:text-base" style="color: #666666;">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 flex-shrink-0" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" style="color: #2196F3;"
+                                    aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                                Equipamiento quirúrgico
+                            </li>
+                            <li class="flex items-center gap-2 text-sm sm:text-base" style="color: #666666;">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 flex-shrink-0" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" style="color: #2196F3;"
+                                    aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                                Integración con sistemas hospitalarios
+                            </li>
+                        </ul>
                     </article>
-                    <article
-                        class="bg-white rounded-xl p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow sm:col-span-2 md:col-span-1">
+                    <article class="bg-white rounded-xl border border-gray-100 p-6 sm:p-8 shadow-sm sm:col-span-2 lg:col-span-1">
                         <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-lg flex items-center justify-center mb-4 sm:mb-6"
                             style="background-color: rgba(33,150,243,0.1);">
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 sm:w-7 sm:h-7" fill="none"
                                 viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="color: #2196F3;"
                                 aria-hidden="true">
                                 <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                                    d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31.826-2.37 2.37a1.724 1.724 0 00-1.066 2.573c-1.756.426-1.756 2.924 0 3.35a1.724 1.724 0 001.066 2.573c.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                             </svg>
                         </div>
-                        <h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3" style="color: #0D1B2A;">Mantenimiento Técnico
-                        </h3>
-                        <p class="text-sm sm:text-base" style="color: #666666;">Programas de mantenimiento preventivo y
-                            correctivo para garantizar la
-                            disponibilidad continua de equipos.</p>
+                        <h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3" style="color: #0D1B2A;">Mantenimiento
+                            Técnico</h3>
+                        <p class="text-sm sm:text-base leading-relaxed mb-4" style="color: #666666;">
+                            Programas de mantenimiento preventivo y correctivo para maximizar la vida útil de sus
+                            equipos. Servicio disponible las 24 horas, los 7 días de la semana.
+                        </p>
+                        <ul class="space-y-2">
+                            <li class="flex items-center gap-2 text-sm sm:text-base" style="color: #666666;">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 flex-shrink-0" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" style="color: #2196F3;"
+                                    aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                                Mantenimiento preventivo programado
+                            </li>
+                            <li class="flex items-center gap-2 text-sm sm:text-base" style="color: #666666;">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 flex-shrink-0" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" style="color: #2196F3;"
+                                    aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                                Reparación de emergencia 24/7
+                            </li>
+                            <li class="flex items-center gap-2 text-sm sm:text-base" style="color: #666666;">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 flex-shrink-0" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" style="color: #2196F3;"
+                                    aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                                Calibración y verificación
+                            </li>
+                            <li class="flex items-center gap-2 text-sm sm:text-base" style="color: #666666;">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 flex-shrink-0" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" style="color: #2196F3;"
+                                    aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                                Contratos de soporte a largo plazo
+                            </li>
+                        </ul>
+                    </article>
+                </div>
+
+                {{-- CTA --}}
+                <div class="mt-12 sm:mt-16 rounded-2xl px-6 sm:px-10 py-10 sm:py-14 text-center text-white"
+                    style="background: linear-gradient(135deg, #0D1B2A, #1a3a5c);">
+                    <h3 class="text-xl sm:text-2xl md:text-3xl font-bold mb-3 sm:mb-4">¿Necesita una solución a medida?</h3>
+                    <p class="text-sm sm:text-base mb-6 sm:mb-8 opacity-80 max-w-2xl mx-auto">
+                        Cuéntenos sus requerimientos y le diseñaremos una propuesta técnica y económica adaptada a su
+                        institución.
+                    </p>
+                    <a href="#contacto"
+                        class="inline-block px-6 sm:px-8 py-3 rounded-lg font-semibold text-base sm:text-lg transition-colors"
+                        style="background-color: #2196F3; color: #fff;">
+                        Solicitar Cotización
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        {{-- Sectores --}}
+        <section id="sectores" class="py-12 sm:py-20" style="background-color: #f8f9fa;" aria-label="Sectores donde trabajamos">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-3 sm:mb-4" style="color: #0D1B2A;">
+                    Sectores donde trabajamos</h2>
+                <p class="text-center mb-8 sm:mb-12 max-w-2xl mx-auto text-sm sm:text-base" style="color: #666666;">
+                    Acompañamos a instituciones de salud en todo Chile, desde grandes hospitales hasta centros de
+                    atención ambulatoria.
+                </p>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+                    <article class="bg-white rounded-xl p-6 shadow-sm">
+                        <div class="w-12 h-12 rounded-lg flex items-center justify-center mb-4"
+                            style="background-color: rgba(33,150,243,0.1);">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2" style="color: #2196F3;" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                            </svg>
+                        </div>
+                        <h3 class="text-lg sm:text-xl font-bold mb-2" style="color: #0D1B2A;">Hospitales</h3>
+                        <p class="text-sm sm:text-base" style="color: #666666;">Infraestructura crítica y equipamiento
+                            para hospitales públicos y privados, desde quirófanos hasta cuidados intensivos.</p>
+                    </article>
+                    <article class="bg-white rounded-xl p-6 shadow-sm">
+                        <div class="w-12 h-12 rounded-lg flex items-center justify-center mb-4"
+                            style="background-color: rgba(33,150,243,0.1);">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2" style="color: #2196F3;" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-lg sm:text-xl font-bold mb-2" style="color: #0D1B2A;">Clínicas</h3>
+                        <p class="text-sm sm:text-base" style="color: #666666;">Soluciones integrales para clínicas
+                            multidisciplinarias y centros de especialidades médicas.</p>
+                    </article>
+                    <article class="bg-white rounded-xl p-6 shadow-sm">
+                        <div class="w-12 h-12 rounded-lg flex items-center justify-center mb-4"
+                            style="background-color: rgba(33,150,243,0.1);">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2" style="color: #2196F3;" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-lg sm:text-xl font-bold mb-2" style="color: #0D1B2A;">Centros médicos y
+                            consultorios</h3>
+                        <p class="text-sm sm:text-base" style="color: #666666;">Adecuación, instalación y equipamiento
+                            de consultorios y centros médicos ambulatorios.</p>
+                    </article>
+                    <article class="bg-white rounded-xl p-6 shadow-sm">
+                        <div class="w-12 h-12 rounded-lg flex items-center justify-center mb-4"
+                            style="background-color: rgba(33,150,243,0.1);">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2" style="color: #2196F3;" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-lg sm:text-xl font-bold mb-2" style="color: #0D1B2A;">Laboratorios y
+                            diagnóstico</h3>
+                        <p class="text-sm sm:text-base" style="color: #666666;">Equipamiento y gases medicinales para
+                            laboratorios clínicos y servicios de diagnóstico.</p>
+                    </article>
+                    <article class="bg-white rounded-xl p-6 shadow-sm">
+                        <div class="w-12 h-12 rounded-lg flex items-center justify-center mb-4"
+                            style="background-color: rgba(33,150,243,0.1);">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2" style="color: #2196F3;" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3.75 19.5h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-lg sm:text-xl font-bold mb-2" style="color: #0D1B2A;">Imagenología</h3>
+                        <p class="text-sm sm:text-base" style="color: #666666;">Integración de equipos de imágenes
+                            médicas: radiología, ecografía, tomografía y resonancia magnética.</p>
+                    </article>
+                    <article class="bg-white rounded-xl p-6 shadow-sm">
+                        <div class="w-12 h-12 rounded-lg flex items-center justify-center mb-4"
+                            style="background-color: rgba(33,150,243,0.1);">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2" style="color: #2196F3;" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-lg sm:text-xl font-bold mb-2" style="color: #0D1B2A;">Urgencias y UCI</h3>
+                        <p class="text-sm sm:text-base" style="color: #666666;">Tecnología confiable y disponibilidad
+                            24/7 para unidades de urgencia y cuidados intensivos.</p>
                     </article>
                 </div>
             </div>
         </section>
 
-        {{-- Nosotros --}}
-        <section id="nosotros" class="py-12 sm:py-20 bg-white" aria-label="Sobre nosotros">
+        {{-- Proyectos --}}
+        <section id="proyectos" class="py-12 sm:py-20 bg-white" aria-label="Proyectos">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid md:grid-cols-2 gap-8 sm:gap-12 items-center">
-                    <div>
-                        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6" style="color: #0D1B2A;">Sobre
-                            INSTAMED</h2>
-                        <p class="mb-3 sm:mb-4 text-sm sm:text-base leading-relaxed" style="color: #666666;">
-                            Con más de 15 años de trayectoria en Chile, INSTAMED Ingeniería se ha consolidado como líder en
-                            soluciones de ingeniería médica. Nuestro equipo multidisciplinario combina experiencia técnica
-                            con un compromiso inquebrantable con la calidad y la seguridad del paciente.
-                        </p>
-                        <p class="mb-6 sm:mb-8 text-sm sm:text-base leading-relaxed" style="color: #666666;">
-                            Trabajamos con los principales fabricantes mundiales para ofrecer tecnología de vanguardia
-                            adaptada a las necesidades específicas de cada institución de salud.
-                        </p>
-                        <ul class="space-y-3 sm:space-y-4">
-                            <li class="flex items-center gap-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0"
-                                    fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"
-                                    style="color: #2196F3;" aria-hidden="true">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-3 sm:mb-4" style="color: #0D1B2A;">
+                    Proyectos</h2>
+                <p class="text-center mb-8 sm:mb-12 max-w-2xl mx-auto text-sm sm:text-base" style="color: #666666;">
+                    Más de 200 proyectos ejecutados a lo largo de 15 años. Algunos ejemplos de nuestras instalaciones,
+                    equipamientos y contratos de mantenimiento.
+                </p>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+                    <article class="bg-white rounded-xl border border-gray-100 p-6 shadow-sm">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold"
+                                style="background-color: rgba(33,150,243,0.1); color: #2196F3;">Hospitales</span>
+                            <span class="text-xs" style="color: #666666;">2025</span>
+                        </div>
+                        <h3 class="text-lg sm:text-xl font-bold mb-2" style="color: #0D1B2A;">Modernización de UCI</h3>
+                        <p class="text-sm" style="color: #666666;">Renovación de monitores multiparamétricos, camas
+                            críticas y sistema de gases medicinales en unidad de cuidados intensivos.</p>
+                    </article>
+                    <article class="bg-white rounded-xl border border-gray-100 p-6 shadow-sm">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold"
+                                style="background-color: rgba(33,150,243,0.1); color: #2196F3;">Clínicas</span>
+                            <span class="text-xs" style="color: #666666;">2025</span>
+                        </div>
+                        <h3 class="text-lg sm:text-xl font-bold mb-2" style="color: #0D1B2A;">Sala de imágenes
+                            diagnósticas</h3>
+                        <p class="text-sm" style="color: #666666;">Diseño e instalación integral de sala de radiología
+                            digital con blindaje, integración PACS y puesta en marcha.</p>
+                    </article>
+                    <article class="bg-white rounded-xl border border-gray-100 p-6 shadow-sm">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold"
+                                style="background-color: rgba(33,150,243,0.1); color: #2196F3;">Hospitales</span>
+                            <span class="text-xs" style="color: #666666;">2024</span>
+                        </div>
+                        <h3 class="text-lg sm:text-xl font-bold mb-2" style="color: #0D1B2A;">Gases medicinales en
+                            quirófanos</h3>
+                        <p class="text-sm" style="color: #666666;">Instalación de red de gases medicinales y sistema de
+                            alarmas para seis quirófanos, según normativa del MINSAL.</p>
+                    </article>
+                    <article class="bg-white rounded-xl border border-gray-100 p-6 shadow-sm">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold"
+                                style="background-color: rgba(33,150,243,0.1); color: #2196F3;">Clínicas</span>
+                            <span class="text-xs" style="color: #666666;">2024</span>
+                        </div>
+                        <h3 class="text-lg sm:text-xl font-bold mb-2" style="color: #0D1B2A;">Mantenimiento preventivo
+                            de red</h3>
+                        <p class="text-sm" style="color: #666666;">Contrato de mantenimiento preventivo y correctivo
+                            para más de 500 equipos biomédicos en clínicas de la Región Metropolitana.</p>
+                    </article>
+                    <article class="bg-white rounded-xl border border-gray-100 p-6 shadow-sm">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold"
+                                style="background-color: rgba(33,150,243,0.1); color: #2196F3;">Laboratorios</span>
+                            <span class="text-xs" style="color: #666666;">2023</span>
+                        </div>
+                        <h3 class="text-lg sm:text-xl font-bold mb-2" style="color: #0D1B2A;">Adecuación de laboratorio
+                            clínico</h3>
+                        <p class="text-sm" style="color: #666666;">Adecuación de infraestructura, instalación de
+                            equipamiento y calibración de instrumentos de análisis.</p>
+                    </article>
+                    <article class="bg-white rounded-xl border border-gray-100 p-6 shadow-sm">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold"
+                                style="background-color: rgba(33,150,243,0.1); color: #2196F3;">Imagenología</span>
+                            <span class="text-xs" style="color: #666666;">2026</span>
+                        </div>
+                        <h3 class="text-lg sm:text-xl font-bold mb-2" style="color: #0D1B2A;">Soporte 24/7 con SLA</h3>
+                        <p class="text-sm" style="color: #666666;">Contrato de soporte técnico con SLA 24/7 para
+                            equipamiento de urgencias e imagenología de un centro médico.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        {{-- Contacto --}}
+        <section id="contacto" class="py-12 sm:py-20" style="background-color: #f8f9fa;" aria-label="Contacto">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-3 sm:mb-4" style="color: #0D1B2A;">
+                    Contáctanos</h2>
+                <p class="text-center mb-8 sm:mb-12 max-w-2xl mx-auto text-sm sm:text-base" style="color: #666666;">
+                    Estamos listos para responder sus consultas y diseñar soluciones a la medida.
+                </p>
+                <div class="grid md:grid-cols-5 gap-8 sm:gap-12">
+                    <div class="md:col-span-2 space-y-6 sm:space-y-8">
+                        <h3 class="text-xl sm:text-2xl font-bold" style="color: #0D1B2A;">Información de Contacto</h3>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-lg flex items-center justify-center shrink-0"
+                                style="background-color: rgba(33,150,243,0.1);">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor" stroke-width="2" style="color: #2196F3;" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                                 </svg>
-                                <span class="text-sm sm:text-base" style="color: #666666;">Certificación ISO
-                                    9001:2015</span>
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0"
-                                    fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"
-                                    style="color: #2196F3;" aria-hidden="true">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-sm sm:text-base mb-1" style="color: #0D1B2A;">Dirección</h4>
+                                <p class="text-sm sm:text-base" style="color: #666666;">Santiago, Chile</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-lg flex items-center justify-center shrink-0"
+                                style="background-color: rgba(33,150,243,0.1);">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor" stroke-width="2" style="color: #2196F3;" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                                 </svg>
-                                <span class="text-sm sm:text-base" style="color: #666666;">Soporte técnico 24/7</span>
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0"
-                                    fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"
-                                    style="color: #2196F3;" aria-hidden="true">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-sm sm:text-base mb-1" style="color: #0D1B2A;">Teléfono</h4>
+                                <p class="text-sm sm:text-base" style="color: #666666;">+56 9 1234 5678</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-lg flex items-center justify-center shrink-0"
+                                style="background-color: rgba(33,150,243,0.1);">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor" stroke-width="2" style="color: #2196F3;" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                                 </svg>
-                                <span class="text-sm sm:text-base" style="color: #666666;">Garantía en todos los
-                                    proyectos</span>
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0"
-                                    fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"
-                                    style="color: #2196F3;" aria-hidden="true">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-sm sm:text-base mb-1" style="color: #0D1B2A;">Email</h4>
+                                <p class="text-sm sm:text-base" style="color: #666666;">contacto@instamed.cl</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-lg flex items-center justify-center shrink-0"
+                                style="background-color: rgba(33,150,243,0.1);">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor" stroke-width="2" style="color: #2196F3;" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                                 </svg>
-                                <span class="text-sm sm:text-base" style="color: #666666;">Equipo multidisciplinario
-                                    certificado</span>
-                            </li>
-                        </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-sm sm:text-base mb-1" style="color: #0D1B2A;">Horario</h4>
+                                <p class="text-sm sm:text-base" style="color: #666666;">Lun - Vie: 9:00 - 18:00</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="rounded-xl overflow-hidden shadow-lg order-first md:order-last">
-                        <img src="/logo.jpg" alt="INSTAMED Ingeniería" class="w-full h-auto" width="600"
-                            height="400" loading="lazy">
+
+                    <div class="md:col-span-3">
+                        <form action="#" method="POST" class="bg-white border border-gray-100 rounded-xl p-6 sm:p-8 space-y-5 sm:space-y-6"
+                            aria-label="Formulario de contacto">
+                            @csrf
+                            <div class="grid sm:grid-cols-2 gap-5 sm:gap-6">
+                                <div>
+                                    <label for="nombre" class="block text-sm font-medium mb-1" style="color: #0D1B2A;">Nombre
+                                        Completo</label>
+                                    <input type="text" id="nombre" name="nombre" required
+                                        class="w-full px-4 py-2.5 sm:py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#2196F3] focus:border-transparent outline-none text-sm sm:text-base">
+                                </div>
+                                <div>
+                                    <label for="empresa" class="block text-sm font-medium mb-1" style="color: #0D1B2A;">Empresa
+                                        / Institución</label>
+                                    <input type="text" id="empresa" name="empresa"
+                                        class="w-full px-4 py-2.5 sm:py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#2196F3] focus:border-transparent outline-none text-sm sm:text-base">
+                                </div>
+                            </div>
+                            <div class="grid sm:grid-cols-2 gap-5 sm:gap-6">
+                                <div>
+                                    <label for="email" class="block text-sm font-medium mb-1" style="color: #0D1B2A;">Email</label>
+                                    <input type="email" id="email" name="email" required
+                                        class="w-full px-4 py-2.5 sm:py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#2196F3] focus:border-transparent outline-none text-sm sm:text-base">
+                                </div>
+                                <div>
+                                    <label for="telefono" class="block text-sm font-medium mb-1" style="color: #0D1B2A;">Teléfono</label>
+                                    <input type="tel" id="telefono" name="telefono"
+                                        class="w-full px-4 py-2.5 sm:py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#2196F3] focus:border-transparent outline-none text-sm sm:text-base">
+                                </div>
+                            </div>
+                            <div>
+                                <label for="servicio" class="block text-sm font-medium mb-1" style="color: #0D1B2A;">Servicio
+                                    de Interés</label>
+                                <select id="servicio" name="servicio"
+                                    class="w-full px-4 py-2.5 sm:py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#2196F3] focus:border-transparent outline-none text-sm sm:text-base"
+                                    style="color: #666666;">
+                                    <option value="">Seleccione un servicio</option>
+                                    <option value="instalaciones">Instalaciones Médicas</option>
+                                    <option value="equipamiento">Equipamiento Hospitalario</option>
+                                    <option value="mantenimiento">Mantenimiento Técnico</option>
+                                    <option value="otro">Otro</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="mensaje" class="block text-sm font-medium mb-1" style="color: #0D1B2A;">Mensaje</label>
+                                <textarea id="mensaje" name="mensaje" rows="5" required
+                                    class="w-full px-4 py-2.5 sm:py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#2196F3] focus:border-transparent outline-none resize-none text-sm sm:text-base"></textarea>
+                            </div>
+                            <button type="submit"
+                                class="w-full py-3 rounded-lg text-white font-semibold text-sm sm:text-base transition-colors"
+                                style="background-color: #2196F3;" onmouseover="this.style.backgroundColor='#1976D2'"
+                                onmouseout="this.style.backgroundColor='#2196F3'">
+                                Enviar Mensaje
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            {{-- Ubicación --}}
+            <div class="py-12 sm:py-20 bg-white mt-12 sm:mt-20" aria-label="Ubicación">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <h2 class="text-xl sm:text-2xl md:text-3xl font-bold text-center mb-6 sm:mb-8" style="color: #0D1B2A;">
+                        Ubicación</h2>
+                    <div class="w-full h-64 sm:h-80 rounded-xl overflow-hidden shadow-sm flex items-center justify-center"
+                        style="background-color: #e0e0e0;">
+                        <div class="text-center px-4" style="color: #666666;">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-3 opacity-50" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                            <p class="font-medium text-sm sm:text-base">Mapa de ubicación</p>
+                            <p class="text-xs sm:text-sm opacity-70">Santiago, Chile</p>
+                        </div>
                     </div>
                 </div>
             </div>

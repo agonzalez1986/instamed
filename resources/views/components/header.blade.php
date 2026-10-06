@@ -1,31 +1,38 @@
-@props(['active' => ''])
+@props([])
 
 <header class="fixed top-0 left-0 w-full bg-white shadow-sm z-50" role="banner">
     <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16"
         aria-label="Navegación principal">
         {{-- Logo (izquierda) --}}
-        <a href="/" class="flex items-center shrink-0" aria-label="INSTAMED - Inicio">
-            <img src="/logo_corto.jpg" alt="INSTAMED Ingeniería Logo" class="h-10 w-auto">
+        <a href="#inicio" class="flex items-center shrink-0" aria-label="Instamed - Inicio">
+            <img src="/logo_corto.jpg" alt="Instamed Logo" class="h-10 sm:h-12 lg:h-14 w-auto">
         </a>
 
-        {{-- Menú desktop centrado --}}
-        <ul class="hidden md:flex items-center justify-center gap-8 text-sm font-medium" style="color: #666666;">
-            <li><a href="/"
-                    class="hover:text-[#2196F3] transition-colors {{ $active === 'inicio' ? 'text-[#2196F3] font-semibold' : '' }}">Inicio</a>
+        {{-- Menú desktop --}}
+        <ul class="hidden lg:flex items-center justify-center gap-6 xl:gap-8 text-sm font-medium">
+            <li><a href="#inicio" data-section="inicio"
+                    class="nav-link text-[#666666] hover:text-[#2196F3] transition-colors"
+                    style="color: #2196F3; font-semibold;">Inicio</a>
             </li>
-            <li><a href="/servicios"
-                    class="hover:text-[#2196F3] transition-colors {{ $active === 'servicios' ? 'text-[#2196F3] font-semibold' : '' }}">Servicios</a>
+            <li><a href="#nosotros" data-section="nosotros"
+                    class="nav-link text-[#666666] hover:text-[#2196F3] transition-colors">Nosotros</a>
             </li>
-            <li><a href="/nosotros"
-                    class="hover:text-[#2196F3] transition-colors {{ $active === 'nosotros' ? 'text-[#2196F3] font-semibold' : '' }}">Nosotros</a>
+            <li><a href="#servicios" data-section="servicios"
+                    class="nav-link text-[#666666] hover:text-[#2196F3] transition-colors">Servicios</a>
             </li>
-            <li><a href="/contacto"
-                    class="hover:text-[#2196F3] transition-colors {{ $active === 'contacto' ? 'text-[#2196F3] font-semibold' : '' }}">Contáctanos</a>
+            <li><a href="#sectores" data-section="sectores"
+                    class="nav-link text-[#666666] hover:text-[#2196F3] transition-colors">Sectores</a>
+            </li>
+            <li><a href="#proyectos" data-section="proyectos"
+                    class="nav-link text-[#666666] hover:text-[#2196F3] transition-colors">Proyectos</a>
+            </li>
+            <li><a href="#contacto" data-section="contacto"
+                    class="nav-link text-[#666666] hover:text-[#2196F3] transition-colors">Contacto</a>
             </li>
         </ul>
 
         {{-- Hamburger botón --}}
-        <button id="menu-toggle" class="md:hidden flex flex-col justify-center items-center w-10 h-10 gap-1.5"
+        <button id="menu-toggle" class="lg:hidden flex flex-col justify-center items-center w-10 h-10 gap-1.5"
             aria-label="Abrir menú" aria-expanded="false">
             <span class="block w-6 h-0.5 bg-[#0D1B2A] transition-transform duration-300 origin-center"
                 id="bar1"></span>
@@ -36,19 +43,22 @@
     </nav>
 
     {{-- Menú móvil --}}
-    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 shadow-lg">
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 shadow-lg">
         <div class="max-w-7xl mx-auto px-4 py-4 space-y-3">
-            <a href="/"
-                class="block py-2 text-sm font-medium hover:text-[#2196F3] transition-colors mobile-menu-link"
-                style="color: {{ $active === 'inicio' ? '#2196F3' : '#666666' }};">Inicio</a>
-            <a href="/servicios"
-                class="block py-2 text-sm font-medium hover:text-[#2196F3] transition-colors mobile-menu-link"
-                style="color: {{ $active === 'servicios' ? '#2196F3' : '#666666' }};">Servicios</a>
-            <a href="/nosotros"
-                class="block py-2 text-sm font-medium hover:text-[#2196F3] transition-colors mobile-menu-link"
-                style="color: {{ $active === 'nosotros' ? '#2196F3' : '#666666' }};">Nosotros</a>
-            <a href="/contacto" class="block py-2 text-sm font-semibold text-white text-center rounded-lg mt-3"
-                style="background-color: #2196F3;">Contáctanos</a>
+            <a href="#inicio" data-section="inicio"
+                class="nav-link mobile-menu-link block py-2 text-sm font-medium text-[#666666] hover:text-[#2196F3] transition-colors"
+                style="color: #2196F3; font-semibold;">Inicio</a>
+            <a href="#nosotros" data-section="nosotros"
+                class="nav-link mobile-menu-link block py-2 text-sm font-medium text-[#666666] hover:text-[#2196F3] transition-colors">Nosotros</a>
+            <a href="#servicios" data-section="servicios"
+                class="nav-link mobile-menu-link block py-2 text-sm font-medium text-[#666666] hover:text-[#2196F3] transition-colors">Servicios</a>
+            <a href="#sectores" data-section="sectores"
+                class="nav-link mobile-menu-link block py-2 text-sm font-medium text-[#666666] hover:text-[#2196F3] transition-colors">Sectores</a>
+            <a href="#proyectos" data-section="proyectos"
+                class="nav-link mobile-menu-link block py-2 text-sm font-medium text-[#666666] hover:text-[#2196F3] transition-colors">Proyectos</a>
+            <a href="#contacto"
+                class="mobile-menu-link block py-2 text-sm font-semibold text-white text-center rounded-lg mt-3"
+                style="background-color: #2196F3;">Contacto</a>
         </div>
     </div>
 </header>
@@ -60,6 +70,7 @@
         const bar1 = document.getElementById('bar1');
         const bar2 = document.getElementById('bar2');
         const bar3 = document.getElementById('bar3');
+        const navLinks = document.querySelectorAll('.nav-link');
 
         toggle.addEventListener('click', function() {
             const isOpen = !menu.classList.contains('hidden');
@@ -81,5 +92,28 @@
                 bar3.classList.remove('-rotate-45', '-translate-y-1.5');
             });
         });
+
+        function setActiveSection(id) {
+            navLinks.forEach(function(link) {
+                const active = link.dataset.section === id;
+                link.style.color = active ? '#2196F3' : '';
+                link.style.fontWeight = active ? '600' : '';
+            });
+        }
+
+        if ('IntersectionObserver' in window) {
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        setActiveSection(entry.target.id);
+                    }
+                });
+            }, { rootMargin: '-64px 0px -55% 0px', threshold: 0 });
+
+            ['inicio', 'nosotros', 'servicios', 'sectores', 'proyectos', 'contacto'].forEach(function(id) {
+                const el = document.getElementById(id);
+                if (el) observer.observe(el);
+            });
+        }
     });
 </script>

@@ -8,9 +8,9 @@ use Illuminate\Support\Facades\Route;
 |--------------------------------------------------------------------------
 */
 Route::view('/', 'welcome')->name('home');
-Route::view('servicios', 'servicios')->name('servicios');
-Route::view('nosotros', 'nosotros')->name('nosotros');
-Route::view('contacto', 'contacto')->name('contacto');
+Route::redirect('servicios', '/#servicios', 301)->name('servicios');
+Route::redirect('nosotros', '/#nosotros', 301)->name('nosotros');
+Route::redirect('contacto', '/#contacto', 301)->name('contacto');
 
 /*
 |--------------------------------------------------------------------------
