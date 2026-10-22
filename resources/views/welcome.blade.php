@@ -1,19 +1,16 @@
 @extends('layouts.public')
 
 @section('title', 'INSTAMED Ingeniería - Ingeniería Médica de Precisión en Chile')
-@section('description', 'Soluciones integrales de ingeniería médica para hospitales y clínicas en Chile. Instalaciones,
-    equipamiento y mantenimiento técnico especializado.')
+@section('description', 'Soluciones integrales de ingeniería médica para hospitales y clínicas en Chile. Instalaciones, equipamiento y mantenimiento técnico especializado.')
 @section('og:title', 'INSTAMED Ingeniería - Ingeniería Médica de Precisión')
 @section('og:description', 'Soluciones integrales de ingeniería médica para hospitales y clínicas en Chile.')
 @section('og:type', 'website')
-@section('og:image')
-    {{ asset('logo.jpg') }}
-@endsection
+@section('og:image', asset('logo.jpg'))
 
 @section('structured-data')
     <script type="application/ld+json">
     {!! json_encode([
-        '@context' => 'https://schema.org',
+        '@' . 'context' => 'https://schema.org',
         '@type' => 'Organization',
         'name' => 'INSTAMED Ingeniería',
         'description' => 'Soluciones integrales de ingeniería médica para hospitales y clínicas en Chile.',
@@ -28,7 +25,7 @@
     </script>
     <script type="application/ld+json">
     {!! json_encode([
-        '@context' => 'https://schema.org',
+        '@' . 'context' => 'https://schema.org',
         '@type' => 'WebSite',
         'name' => 'INSTAMED Ingeniería',
         'url' => url('/'),
